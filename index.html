@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090914">
+  <title>Sanuu 💜 Our Little Universe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="stars" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home">✦ Sanuu's Universe</a>
+    <nav aria-label="Main navigation">
+      <a href="#photos">Photos</a>
+      <a href="#memories">Memories</a>
+      <a href="#quiz">Bestie Quiz</a>
+    </nav>
+    <button id="musicButton" class="small-button" type="button">♫ Play music</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <p class="eyebrow">A tiny corner of the universe, just for us</p>
+      <h1>Hey, <span>Sanuu</span> 💜</h1>
+      <p class="hero-copy">Some people make ordinary days feel special. You're one of those people.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#memories">Explore our memories ✨</a>
+        <button id="surpriseButton" class="button secondary" type="button">Open your surprise 🎁</button>
+      </div>
+      <div id="surpriseMessage" class="surprise-message" hidden>
+        <span class="surprise-sparkle">✧</span>
+        <h2>Bestie, you're a rare kind of magic! 💜</h2>
+        <p>Thanks for the laughs, the random talks, and all the little moments that became big memories.</p>
+      </div>
+      <p class="scroll-hint">↓ scroll a little</p>
+    </section>
+
+    <section id="photos" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Snapshots & smiles</p>
+        <h2>Our <span>photo gallery</span> 📸</h2>
+        <p>Replace these sample photos with your own favourite pictures together.</p>
+      </div>
+      <div class="gallery">
+        <figure class="photo-card">
+          <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=85" alt="Friends spending time together" loading="lazy">
+          <figcaption>Good times, great company ✨</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=900&q=85" alt="A happy celebration" loading="lazy">
+          <figcaption>Little celebrations 🎉</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=900&q=85" alt="Friends sharing a moment" loading="lazy">
+          <figcaption>Memories worth keeping 💫</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=85" alt="Friends smiling together" loading="lazy">
+          <figcaption>My favourite kind of chaos 😂</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=900&q=85" alt="Friends having fun outdoors" loading="lazy">
+          <figcaption>Just us being us 🌈</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=900&q=85" alt="Friends gathered around a table" loading="lazy">
+          <figcaption>More moments to come 💜</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="memories" class="section memories-section">
+      <div class="section-heading">
+        <p class="eyebrow">The little things matter</p>
+        <h2>Friendship <span>memory lane</span> 🌙</h2>
+        <p>Edit these cards to add your real stories, jokes, and special dates.</p>
+      </div>
+      <div class="timeline">
+        <article class="memory-card">
+          <span class="memory-icon">🌟</span>
+          <div><p class="memory-label">The beginning</p><h3>When we became besties</h3><p>Every great story has a beginning—and ours deserves its own little spotlight.</p></div>
+        </article>
+        <article class="memory-card">
+          <span class="memory-icon">🤣</span>
+          <div><p class="memory-label">Certified chaos</p><h3>The laughs we couldn't stop</h3><p>Those random moments that make absolutely no sense to anyone else.</p></div>
+        </article>
+        <article class="memory-card">
+          <span class="memory-icon">🫶</span>
+          <div><p class="memory-label">Always appreciated</p><h3>Thanks for being you</h3><p>Here's to more honest talks, silly jokes, and memories we haven't made yet.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="quiz" class="section quiz-section">
+      <div class="quiz-box">
+        <p class="eyebrow">Let's test that bestie knowledge</p>
+        <h2>The <span>Bestie Quiz</span> 💜</h2>
+        <p id="quizProgress" class="quiz-progress">Question 1 of 3</p>
+        <h3 id="quizQuestion">What's the best part of being besties?</h3>
+        <div id="quizOptions" class="quiz-options">
+          <button class="quiz-option" type="button" data-answer="0">Laughing at everything 😂</button>
+          <button class="quiz-option" type="button" data-answer="1">Making memories ✨</button>
+          <button class="quiz-option" type="button" data-answer="2">All of it, obviously 💜</button>
+        </div>
+        <p id="quizFeedback" class="quiz-feedback" aria-live="polite"></p>
+        <button id="nextQuestion" class="button primary" type="button" hidden>Next question →</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with 💜 for Sanuu</p>
+    <p class="footer-small">A little website for a very special friendship ✨</p>
+  </footer>
+
+  <audio id="backgroundMusic" loop preload="none">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>
